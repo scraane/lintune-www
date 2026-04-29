@@ -15,8 +15,26 @@
     color: #0e0f12;
     min-height: 100vh;
     display: flex; align-items: center; justify-content: center;
-    padding: 40px 20px;
+    padding: 80px 20px 40px;
   }
+  .alpha-banner {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 9px 24px;
+    text-align: center;
+    font-family: 'Geist Mono', ui-monospace, 'SF Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #1a0c00;
+    background: repeating-linear-gradient(
+      -45deg,
+      #f59e0b 0px,   #f59e0b 10px,
+      #d97706 10px,  #d97706 20px
+    );
+  }
+  .alpha-banner strong { font-weight: 700; }
   .browser {
     width: 100%; max-width: 980px;
     background: #ffffff;
@@ -103,6 +121,9 @@
 </style>
 </head>
 <body>
+  <div class="alpha-banner">
+    <strong>⚠ Heavy alpha</strong> &mdash; not for production use &mdash; things will break
+  </div>
   <div class="browser">
     <div class="bar">
       <div class="dot" style="background:#ff5f57"></div>
