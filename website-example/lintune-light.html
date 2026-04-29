@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lintune.xyz — preview (light)</title>
+<link rel="icon" type="image/svg+xml" href="../favicon/favicon-light.svg"/>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Geist', 'Inter', system-ui, -apple-system, 'Helvetica Neue', sans-serif;
+    background: #fafaf7;
+    color: #0e0f12;
+    min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    padding: 40px 20px;
+  }
+  .browser {
+    width: 100%; max-width: 980px;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.08), 0 1px 0 rgba(255,255,255,0) inset;
+    border: 1px solid #eee;
+  }
+  .bar {
+    display: flex; align-items: center; gap: 8px;
+    padding: 11px 14px;
+    background: #f1f1ee;
+    border-bottom: 1px solid #eee;
+  }
+  .dot { width: 12px; height: 12px; border-radius: 50%; }
+  .url {
+    margin-left: 14px;
+    font-family: 'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 12px; color: #888;
+    background: #fff;
+    padding: 4px 12px; border-radius: 4px;
+    border: 1px solid #eee;
+  }
+  .nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 22px 36px;
+    border-bottom: 1px solid #eee;
+  }
+  .brand { display: flex; align-items: center; gap: 14px; }
+  .brand svg.mark { display: block; }
+  .brand .wordmark {
+    font-weight: 800; font-size: 26px; letter-spacing: -0.045em; color: #0e0f12;
+    line-height: 1;
+  }
+  .menu {
+    display: flex; align-items: center; gap: 26px;
+    font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px;
+    color: #888;
+  }
+  .menu a { color: inherit; text-decoration: none; }
+  .menu a:hover { color: #0e0f12; }
+  .menu .cta {
+    background: #0e0f12; color: #fafaf7;
+    padding: 7px 14px; border-radius: 4px;
+  }
+  .hero {
+    padding: 88px 36px 72px;
+  }
+  .hero h1 {
+    margin: 0;
+    font-size: 56px; font-weight: 700; letter-spacing: -0.035em;
+    line-height: 1.05; color: #0e0f12;
+    max-width: 640px;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: #16a34a;
+  }
+  .hero .meta {
+    margin-top: 28px;
+    font-family: 'Geist Mono', ui-monospace, monospace;
+    font-size: 12px; color: #888;
+    letter-spacing: 0.02em;
+  }
+  .hero .actions {
+    margin-top: 40px;
+    display: flex; gap: 12px;
+  }
+  .btn {
+    font-family: 'Geist', sans-serif; font-size: 14px; font-weight: 500;
+    padding: 12px 22px; border-radius: 6px;
+    text-decoration: none; cursor: pointer;
+    border: 1px solid transparent;
+  }
+  .btn-primary { background: #0e0f12; color: #fafaf7; }
+  .btn-secondary { background: transparent; color: #0e0f12; border-color: #eee; }
+  .footer {
+    padding: 22px 36px;
+    border-top: 1px solid #eee;
+    font-family: 'Geist Mono', ui-monospace, monospace;
+    font-size: 11px; color: #888;
+    display: flex; justify-content: space-between;
+  }
+</style>
+</head>
+<body>
+  <div class="browser">
+    <div class="bar">
+      <div class="dot" style="background:#ff5f57"></div>
+      <div class="dot" style="background:#febc2e"></div>
+      <div class="dot" style="background:#28c840"></div>
+      <div class="url">lintune.xyz</div>
+    </div>
+
+    <div class="nav">
+      <div class="brand">
+        <svg class="mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="36" height="36" fill="none" aria-label="Lintune mark">
+          <rect x="14" y="10" width="14" height="12" fill="#0e0f12"/>
+          <rect x="14" y="24" width="14" height="12" fill="#0e0f12"/>
+          <rect x="14" y="38" width="14" height="12" fill="#0e0f12"/>
+          <rect x="30" y="38" width="20" height="12" fill="#16a34a"/>
+        </svg>
+        <span class="wordmark">lintune</span>
+      </div>
+      <div class="menu">
+        <a href="#">docs</a>
+        <a href="#">github</a>
+        <a href="#">install</a>
+        <a href="#" class="cta">get started</a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <h1>Self-hosted identity, mail, and storage. <em>One platform.</em></h1>
+      <div class="meta">keycloak · mailcow · nextcloud · open source · MIT</div>
+      <div class="actions">
+        <a class="btn btn-primary" href="#">Install in 5 minutes</a>
+        <a class="btn btn-secondary" href="#">Read the docs</a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span>© 2026 lintune</span>
+      <span>v0.1 · self-hostable</span>
+    </div>
+  </div>
+</body>
+</html>
