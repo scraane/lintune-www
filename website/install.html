@@ -157,16 +157,26 @@
   <div id="content">Loading…</div>
 
   <script>
-    // Replace with your own repo, branch, and file path
-    const url = "https://raw.githubusercontent.com/scraane/lintune-admin/refs/heads/dev/docs/install.md";
+    const RAW_BASE  = "https://raw.githubusercontent.com/scraane/lintune-admin/refs/heads/dev/docs/";
+    const BLOB_BASE = "https://github.com/scraane/lintune-admin/blob/dev/docs/";
+    const url = RAW_BASE + "install.md";
 
     fetch(url)
-      .then(response => response.text())
+      .then(r => r.text())
       .then(text => {
-        document.getElementById("content").innerHTML = marked.parse(text);
+        const el = document.getElementById("content");
+        el.innerHTML = marked.parse(text);
+        el.querySelectorAll("a[href]").forEach(a => {
+          const href = a.getAttribute("href");
+          if (!href.startsWith("http") && !href.startsWith("#") && !href.startsWith("mailto:")) {
+            a.href = BLOB_BASE + href;
+            a.target = "_blank";
+            a.rel = "noopener noreferrer";
+          }
+        });
       })
       .catch(err => {
-        document.getElementById("content").innerText = "Error loading Markdown: " + err;
+        document.getElementById("content").innerText = "Error loading docs: " + err;
       });
   </script>
     </div>
